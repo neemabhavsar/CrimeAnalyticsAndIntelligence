@@ -1,0 +1,25 @@
+############ Count of the Crimes commited based on the Category ################
+
+SELECT category, COUNT(*) AS cnt FROM crimes GROUP BY category
+order by cnt desc;
+
+######## Count of the Crimes committed based on Description ########
+
+SELECT Descript, COUNT(*) AS cnt FROM crimes GROUP BY Descript
+order by cnt desc;
+
+####### Incidents that occured ######################
+
+Select PdDistrict, category, dayOfWeek, Time from sfpd_incident_2008 group by PdDistrict, category, dayOfWeek, Time
+
+############ Incidents that occured based on a Day of the Week Count ############
+
+Select dayofweek, count(*) from crimes group by dayofweek
+
+############ locations of crimes that happened on Sunday ##################
+
+Select location from crimes where dayofweek = "Sunday"
+
+########### Crimes that happeneed on a Wednesday ################
+
+Select category, descript from crimes where dayofweek = "friday"
